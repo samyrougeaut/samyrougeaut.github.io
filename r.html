@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <title>Redirection</title>
+</head>
+<body>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const r = urlParams.get('r');
+
+        if (r) {
+            const a = document.createElement("a");
+            a.href = r;
+            a.rel = "noreferrer";
+
+            document.body.appendChild(a);
+
+            a.click();
+        }
+    </script>
+</body>
+</html>
