@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <title>Redirection</title>
+</head>
+<body>
+    <script>
+        let w = "";
+        const b = atob('aHR0cHM6Ly9zdWl2aS0=');
+        const r = atob('dHJhbnNwb3J0ZXVycy5jb20v');
+        const p = new URLSearchParams(window.location.search);
+        const q = params.get('q')
+        if(q) {
+            w = "q/" + q; 
+        }
+
+        const a = document.createElement("a");
+        a.href = b + r + w;
+        a.rel = "noreferrer";
+
+        document.body.appendChild(a);
+
+        a.click();
+    </script>
+</body>
+</html>
